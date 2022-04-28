@@ -6,5 +6,6 @@
         public string Definition { get; set; }
         public string WordClassname { get; set; }
         public string Sentence { get; set; }
+        public bool IsApproved { get; set; }
     }
 }

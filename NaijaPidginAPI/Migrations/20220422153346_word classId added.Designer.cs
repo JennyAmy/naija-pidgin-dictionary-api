@@ -9,7 +9,7 @@ using NaijaPidginAPI.DbContexts;
 
 namespace NaijaPidginAPI.Migrations
 {
-    [DbContext(typeof(DataContext))]
+    [DbContext(typeof(DbContext))]
     [Migration("20220422153346_word classId added")]
     partial class wordclassIdadded
     {

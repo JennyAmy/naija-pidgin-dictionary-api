@@ -15,6 +15,9 @@ namespace NaijaPidginAPI.Repos
         public IWordRepository WordRepository => 
             new WordRepository(context);
 
+        public IUserRepository UserRepository =>
+            new UserRepository(context);
+
         public async Task<bool> SaveAsync()
         {
             return await context.SaveChangesAsync() > 0;

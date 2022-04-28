@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jennifer.Oliseynum\\Documents\\Projects\\MainProjects\\NaijaPidginAPI\\NaijaPidginAPI.csproj": {}
+    "C:\\Users\\Jennifer.Oliseynum\\Documents\\Projects\\MainProjects\\NaijaPidginApp\\NaijaPidginAPI\\NaijaPidginAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jennifer.Oliseynum\\Documents\\Projects\\MainProjects\\NaijaPidginAPI\\NaijaPidginAPI.csproj": {
+    "C:\\Users\\Jennifer.Oliseynum\\Documents\\Projects\\MainProjects\\NaijaPidginApp\\NaijaPidginAPI\\NaijaPidginAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jennifer.Oliseynum\\Documents\\Projects\\MainProjects\\NaijaPidginAPI\\NaijaPidginAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Jennifer.Oliseynum\\Documents\\Projects\\MainProjects\\NaijaPidginApp\\NaijaPidginAPI\\NaijaPidginAPI.csproj",
         "projectName": "NaijaPidginAPI",
-        "projectPath": "C:\\Users\\Jennifer.Oliseynum\\Documents\\Projects\\MainProjects\\NaijaPidginAPI\\NaijaPidginAPI.csproj",
+        "projectPath": "C:\\Users\\Jennifer.Oliseynum\\Documents\\Projects\\MainProjects\\NaijaPidginApp\\NaijaPidginAPI\\NaijaPidginAPI.csproj",
         "packagesPath": "C:\\Users\\Jennifer.Oliseynum\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jennifer.Oliseynum\\Documents\\Projects\\MainProjects\\NaijaPidginAPI\\obj\\",
+        "outputPath": "C:\\Users\\Jennifer.Oliseynum\\Documents\\Projects\\MainProjects\\NaijaPidginApp\\NaijaPidginAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jennifer.Oliseynum\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

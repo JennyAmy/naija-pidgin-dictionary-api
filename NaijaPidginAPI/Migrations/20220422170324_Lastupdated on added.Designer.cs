@@ -9,7 +9,7 @@ using NaijaPidginAPI.DbContexts;
 
 namespace NaijaPidginAPI.Migrations
 {
-    [DbContext(typeof(DataContext))]
+    [DbContext(typeof(DbContext))]
     [Migration("20220422170324_Lastupdated on added")]
     partial class Lastupdatedonadded
     {

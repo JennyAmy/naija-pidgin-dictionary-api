@@ -6,6 +6,8 @@ namespace NaijaPidginAPI.Interfaces
     {
         IWordRepository WordRepository { get; }
 
+        IUserRepository UserRepository { get; }
+
         Task<bool> SaveAsync();
     }
 }

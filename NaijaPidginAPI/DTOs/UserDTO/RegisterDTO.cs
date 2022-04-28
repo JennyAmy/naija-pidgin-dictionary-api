@@ -10,9 +10,15 @@ namespace NaijaPidginAPI.DTOs.UserDTO
 
         [Required]
         public string Email { get; set; }
-        public string Phone { get; set; }
 
         [Required]
         public string Password { get; set; }
+    }
+
+    public class UpdateDTO
+    {   
+        public string Username { get; set; }
+       
+        public string Email { get; set; }
     }
 }

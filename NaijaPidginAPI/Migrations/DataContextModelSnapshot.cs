@@ -8,7 +8,7 @@ using NaijaPidginAPI.DbContexts;
 
 namespace NaijaPidginAPI.Migrations
 {
-    [DbContext(typeof(DataContext))]
+    [DbContext(typeof(DbContext))]
     partial class DataContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -26,9 +26,27 @@ namespace NaijaPidginAPI.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<DateTime>("DateTimeCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DisabledBy")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDisabled")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("LastUpdatedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("LastUpdatedOn")
+                        .HasColumnType("datetime2");
 
                     b.Property<byte[]>("Password")
                         .IsRequired()
@@ -36,9 +54,6 @@ namespace NaijaPidginAPI.Migrations
 
                     b.Property<byte[]>("PasswordKey")
                         .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
                         .IsRequired()
@@ -56,15 +71,24 @@ namespace NaijaPidginAPI.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int?>("ApprovedBy")
+                        .HasColumnType("int");
+
                     b.Property<string>("Definition")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("bit");
 
                     b.Property<int?>("LastUpdatedBy")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("LastUpdatedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<int?>("PostedBy")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("PostedOn")
                         .HasColumnType("datetime2");

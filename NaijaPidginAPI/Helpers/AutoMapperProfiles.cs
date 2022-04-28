@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using NaijaPidginAPI.DTOs;
+using NaijaPidginAPI.DTOs.UserDTO;
 using NaijaPidginAPI.Entities;
 
 namespace NaijaPidginAPI.Helpers
@@ -12,6 +13,9 @@ namespace NaijaPidginAPI.Helpers
 
             CreateMap<Word, ListWordDTO>()
                 .ForMember(w => w.WordClassname, opt => opt.MapFrom(src => src.WordClass.WordClassname));
+
+            CreateMap<User, ListUsersDTO>().ReverseMap();
+            CreateMap<User, UpdateDTO>().ReverseMap();
         }
         
     }

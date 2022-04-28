@@ -6,5 +6,11 @@
         public string Definition { get; set; }
         public int WordClassId { get; set; }
         public string Sentence { get; set; }
+
     }
+
+    //public class ApproveWordDTO
+    //{
+    //    public bool IsApproved { get; set; }
+    //}
 }
