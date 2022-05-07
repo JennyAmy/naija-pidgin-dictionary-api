@@ -73,35 +73,35 @@ namespace NaijaPidginAPI.Controllers
         }
 
 
-        [Authorize]
-        [HttpPost("change-password")]
-        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDTO passwordDTO)
-        {
-            var loggedInUser = GetUserId();
+        //[Authorize]
+        //[HttpPost("change-password")]
+        //public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDTO passwordDTO)
+        //{
+        //    var loggedInUser = GetUserId();
 
-            var user = await unitOfWork.UserRepository.GetUserByIdAsync(loggedInUser);
+        //    var user = await unitOfWork.UserRepository.GetUserByIdAsync(loggedInUser);
 
-            var userName = await userManager.FindByNameAsync(user.Username);
+        //    var userName = await userManager.FindByNameAsync(user.Username);
            
-            if (user == null)
-                return StatusCode(StatusCodes.Status404NotFound, new { status = false, message = "User does not exist." });
+        //    if (user == null)
+        //        return StatusCode(StatusCodes.Status404NotFound, new { status = false, message = "User does not exist." });
 
-            if (string.Compare(passwordDTO.NewPassword, passwordDTO.ConfirmPassword) != 0)
-                return StatusCode(StatusCodes.Status400BadRequest, new { status = false, message = "The new password and confirm new password does not match" });
+        //    if (string.Compare(passwordDTO.NewPassword, passwordDTO.ConfirmPassword) != 0)
+        //        return StatusCode(StatusCodes.Status400BadRequest, new { status = false, message = "The new password and confirm new password does not match" });
             
-            var result = await userManager.ChangePasswordAsync(userName, passwordDTO.OldPassword, passwordDTO.NewPassword);
+        //    var result = await userManager.ChangePasswordAsync(userName, passwordDTO.OldPassword, passwordDTO.NewPassword);
 
-            if (!result.Succeeded)
-            {
-                var errors = new List<string>();
-                foreach (var error in result.Errors)
-                {
-                    errors.Add(error.Description);
-                }
-                return StatusCode(StatusCodes.Status500InternalServerError, new { status = false, message = string.Join(", ", errors) });
-            }
-            return Ok(new { status = true, message = "Password changed successfully" });
-        }
+        //    if (!result.Succeeded)
+        //    {
+        //        var errors = new List<string>();
+        //        foreach (var error in result.Errors)
+        //        {
+        //            errors.Add(error.Description);
+        //        }
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new { status = false, message = string.Join(", ", errors) });
+        //    }
+        //    return Ok(new { status = true, message = "Password changed successfully" });
+        //}
 
 
         private string CreateJWT(User user)
