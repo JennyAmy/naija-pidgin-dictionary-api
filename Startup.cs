@@ -93,12 +93,12 @@ namespace NaijaPidginAPI
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NaijaPidginAPI v1"));
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NaijaPidginAPI v1"));
 
             app.UseHttpsRedirection();
 
