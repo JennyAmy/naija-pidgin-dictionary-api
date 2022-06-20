@@ -61,7 +61,6 @@ namespace NaijaPidginAPI.Controllers
 
         //Manually make or remove an admin
         [HttpPut("make-admin/{userId}")]
-        [Authorize]
         public async Task<IActionResult> MakeOrRemoveAdmin(int userId)
         {
             var loggedInUser = GetUserId();
@@ -90,7 +89,6 @@ namespace NaijaPidginAPI.Controllers
 
         // Automatically makes a user an admin
         [HttpPut("automatic-admin")]
-        [Authorize]
         public async Task<IActionResult> AutomaticAdmin()
         {
             var loggedInUserId = GetUserId();
@@ -133,7 +131,6 @@ namespace NaijaPidginAPI.Controllers
         }
 
         [HttpPut("disable-user/{userId}")]
-        [Authorize]
         public async Task<IActionResult> DisableUser(int userId)
         {
             var loggedInUser = GetUserId();

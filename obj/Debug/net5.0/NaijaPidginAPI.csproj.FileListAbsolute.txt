@@ -120,7 +120,6 @@ C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\Naija
 C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\obj\Debug\net5.0\scopedcss\bundle\NaijaPidginAPI.styles.css
 C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\obj\Debug\net5.0\staticwebassets\NaijaPidginAPI.StaticWebAssets.Manifest.cache
 C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\obj\Debug\net5.0\NaijaPidginAPI.RazorTargetAssemblyInfo.cache
-C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\obj\Debug\net5.0\NaijaPidginAPI.csproj.CopyComplete
 C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\obj\Debug\net5.0\NaijaPidginAPI.dll
 C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\obj\Debug\net5.0\ref\NaijaPidginAPI.dll
 C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\obj\Debug\net5.0\NaijaPidginAPI.pdb
