@@ -29,7 +29,9 @@ namespace NaijaPidginAPI.Controllers
             this.unitOfWork = unitOfWork;
             this.configuration = configuration;
         }
-
+        /// <summary>
+        /// Login for registered users 
+        /// </summary>>
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginRequestDTO loginRequestDTO)
         {
@@ -54,6 +56,10 @@ namespace NaijaPidginAPI.Controllers
 
         }
 
+
+        /// <summary>
+        /// Registers new users 
+        /// </summary>>
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDTO registerDTO)
         {

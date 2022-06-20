@@ -25,7 +25,9 @@ namespace NaijaPidginAPI.Controllers
         }
 
 
-
+        /// <summary>
+        /// Lists all registered users 
+        /// </summary>>
         [HttpGet("list")]
         public async Task<IActionResult> GetAllUsers()
         {
@@ -34,7 +36,9 @@ namespace NaijaPidginAPI.Controllers
             return Ok(userDTO);
         }
 
-
+        /// <summary>
+        /// Gets a registered user by specified Id
+        /// </summary>>
         [HttpGet("list/{userId}")]
         public async Task<IActionResult> GetUserById(int userId)
         {
@@ -43,6 +47,9 @@ namespace NaijaPidginAPI.Controllers
             return Ok(userDTO);
         }
 
+        /// <summary>
+        /// Lists all users that are admins 
+        /// </summary>>
         [HttpGet("list-admins")]
         public async Task<IActionResult> GetAllAdmins()
         {
@@ -51,6 +58,9 @@ namespace NaijaPidginAPI.Controllers
             return Ok(userDTO);
         }
 
+        /// <summary>
+        /// Lists all users that are non-admins 
+        /// </summary>>
         [HttpGet("list-nonadmins")]
         public async Task<IActionResult> GetAllNonAdmins()
         {
@@ -59,6 +69,9 @@ namespace NaijaPidginAPI.Controllers
             return Ok(userDTO);
         }
 
+        /// <summary>
+        /// Makes a user an admin
+        /// </summary>>
         //Manually make or remove an admin
         [HttpPut("make-admin/{userId}")]
         public async Task<IActionResult> MakeOrRemoveAdmin(int userId)
@@ -87,6 +100,9 @@ namespace NaijaPidginAPI.Controllers
             return StatusCode(200);
         }
 
+        /// <summary>
+        /// Automatically makes a user an admin after the system has checked to see that the number of words added by that user is above 10
+        /// </summary>>
         // Automatically makes a user an admin
         [HttpPut("automatic-admin")]
         public async Task<IActionResult> AutomaticAdmin()
@@ -108,6 +124,9 @@ namespace NaijaPidginAPI.Controllers
             return StatusCode(200);
         }
 
+        /// <summary>
+        /// Updates a user's information 
+        /// </summary>>
         [HttpPut]
         [Route("update")]
         public async Task<IActionResult> UpdateUser(UpdateDTO updateDTO)
@@ -130,6 +149,9 @@ namespace NaijaPidginAPI.Controllers
 
         }
 
+        /// <summary>
+        ///Disables a user from the system that has gone against guildelines
+        /// </summary>>
         [HttpPut("disable-user/{userId}")]
         public async Task<IActionResult> DisableUser(int userId)
         {
@@ -156,6 +178,9 @@ namespace NaijaPidginAPI.Controllers
             return StatusCode(200);
         }
 
+        /// <summary>
+        /// Confirms if a user is an admin
+        /// </summary>>
         [HttpGet]
         [Route("isadmin/{userId}")]
         public async Task<IActionResult> isAdmin(int userId)
@@ -177,7 +202,6 @@ namespace NaijaPidginAPI.Controllers
                 data = totalUsers
             });
         }
-
 
         [AllowAnonymous]
         [HttpPost("user-exists")]

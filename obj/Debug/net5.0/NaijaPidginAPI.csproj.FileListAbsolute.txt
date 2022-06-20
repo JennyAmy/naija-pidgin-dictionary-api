@@ -125,3 +125,5 @@ C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\Naija
 C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\obj\Debug\net5.0\NaijaPidginAPI.pdb
 C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\obj\Debug\net5.0\NaijaPidginAPI.genruntimeconfig.cache
 C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\bin\Debug\net5.0\NaijaPidginAPI.xml
+C:\Users\Jennifer.Oliseynum\Documents\Projects\MainProjects\NaijaPidginApp\NaijaPidginAPI\obj\Debug\net5.0\NaijaPidginAPI.xml

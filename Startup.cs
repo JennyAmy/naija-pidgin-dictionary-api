@@ -19,7 +19,9 @@ using NaijaPidginAPI.Interfaces;
 using NaijaPidginAPI.Repos;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -65,7 +67,7 @@ namespace NaijaPidginAPI
 
                 var securitySchema = new OpenApiSecurityScheme
                 {
-                    Description = "JWT Authorization header using the Bearer scheme. Just paste the generated token in the value input box",
+                    Description = "JWT Authorization header using the Bearer scheme. Paste the generated token in the value input box",
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.Http,
@@ -86,6 +88,10 @@ namespace NaijaPidginAPI
 
                 c.AddSecurityRequirement(securityRequirement);
 
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+
             });
         }
 
@@ -95,6 +101,7 @@ namespace NaijaPidginAPI
 
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NaijaPidginAPI v1"));
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
